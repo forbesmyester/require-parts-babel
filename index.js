@@ -44,11 +44,12 @@ module.exports = function (babelObj) {
                     if (node.arguments[2].type !== 'ArrayExpression') {
                         throw new Error("The third argument of require-parts must be an array");
                     }
-                    return mapper(
+                    return this.replaceWithSourceString(
+                    mapper(
                         node.arguments[0].value,
                         intModulePath = node.arguments[1].value,
                         intFiles = node.arguments[2].elements
-                    );
+                    ));
                 }
             }
         }
