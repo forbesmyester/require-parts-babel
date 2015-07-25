@@ -2,7 +2,7 @@
 
 Babel transformation related to [require-parts](https://github.com/forbesmyester/require-parts.git) that does that converts the:
 
-    var R = requireParts('ramda', 'src', ['zipObj.js', 'min.js']);
+    var R = require('require-parts')('ramda', 'src', ['zipObj.js', 'min.js']);
 
 into:
 
